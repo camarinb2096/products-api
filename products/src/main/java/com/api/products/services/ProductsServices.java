@@ -49,4 +49,15 @@ public class ProductsServices {
                 .filter(product -> product.getId().equals(id))
                 .findFirst();
     }
+
+    // Método para crear un nuevo producto
+    public ProductsEntity createProduct(ProductsEntity product) {
+        if (product.getId() == null) {
+            product.setId(UUID.randomUUID());
+        }
+
+        products.add(product);
+
+        return product;
+    }
 }
