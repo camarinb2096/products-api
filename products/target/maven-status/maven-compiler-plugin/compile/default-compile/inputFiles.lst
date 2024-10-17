@@ -1,0 +1,5 @@
+/workspaces/products-api/products/src/main/java/com/api/products/ProductsApplication.java
+/workspaces/products-api/products/src/main/java/com/api/products/ServletInitializer.java
+/workspaces/products-api/products/src/main/java/com/api/products/controllers/ProductsController.java
+/workspaces/products-api/products/src/main/java/com/api/products/entities/ProductsEntity.java
+/workspaces/products-api/products/src/main/java/com/api/products/services/ProductsServices.java
