@@ -74,4 +74,20 @@ public class ProductsServices {
             return existingProduct;
         });
     }
+
+    // Método para eliminar un producto
+    public Optional<ProductsEntity> deleteProduct(UUID id) {
+    // Buscar el producto por su ID
+    Optional<ProductsEntity> productToDelete = getProductById(id);
+
+    // Si el producto existe, eliminarlo de la lista
+    if (productToDelete.isPresent()) {
+        products.remove(productToDelete.get());
+        return productToDelete;  // Retornar el producto eliminado
+    }
+
+    // Si no se encuentra el producto, retornar Optional.empty()
+    return Optional.empty();
+    }
+
 }
