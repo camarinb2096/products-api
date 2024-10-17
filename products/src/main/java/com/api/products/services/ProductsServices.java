@@ -60,4 +60,18 @@ public class ProductsServices {
 
         return product;
     }
+
+// Método para actualizar un producto
+    public Optional<ProductsEntity> updateProduct(UUID id, ProductsEntity updatedProduct) {
+    return products.stream()
+        .filter(product -> product.getId().equals(id))
+        .findFirst()
+        .map(existingProduct -> {
+            existingProduct.setName(updatedProduct.getName());
+            existingProduct.setCategory(updatedProduct.getCategory());
+            existingProduct.setPrice(updatedProduct.getPrice());
+            existingProduct.setStock(updatedProduct.getStock());
+            return existingProduct;
+        });
+    }
 }
