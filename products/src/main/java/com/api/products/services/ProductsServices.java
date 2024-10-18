@@ -77,16 +77,13 @@ public class ProductsServices {
 
     // Método para eliminar un producto
     public Optional<ProductsEntity> deleteProduct(UUID id) {
-    // Buscar el producto por su ID
     Optional<ProductsEntity> productToDelete = getProductById(id);
 
-    // Si el producto existe, eliminarlo de la lista
     if (productToDelete.isPresent()) {
         products.remove(productToDelete.get());
-        return productToDelete;  // Retornar el producto eliminado
+        return productToDelete;
     }
 
-    // Si no se encuentra el producto, retornar Optional.empty()
     return Optional.empty();
     }
 
