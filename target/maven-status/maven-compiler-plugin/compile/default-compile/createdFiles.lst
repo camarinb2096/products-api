@@ -1,0 +1,5 @@
+com/api/products/controllers/ProductsController.class
+com/api/products/ServletInitializer.class
+com/api/products/ProductsApplication.class
+com/api/products/services/ProductsServices.class
+com/api/products/entities/ProductsEntity.class
